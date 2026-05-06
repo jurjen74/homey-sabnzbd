@@ -1,0 +1,19 @@
+{
+  "title": { "en": "Status changed" },
+  "hint": { "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error)." },
+  "tokens": [
+    {
+      "name": "status",
+      "type": "string",
+      "title": { "en": "Status" },
+      "example": { "en": "downloading" }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    }
+  ]
+}

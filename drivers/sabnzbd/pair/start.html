@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 24px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-size: 0.85em;
+      font-weight: 600;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    input {
+      width: 100%;
+      padding: 9px 11px;
+      margin-top: 4px;
+      border: 1px solid #d0d0d0;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    input:focus { outline: 2px solid #007aff; border-color: transparent; }
+    #btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 11px;
+      background: #007aff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #btn:disabled { opacity: 0.5; cursor: default; }
+    #error {
+      margin-top: 10px;
+      color: #c00;
+      font-size: 0.9em;
+      display: none;
+    }
+    .hint {
+      margin-top: 6px;
+      font-size: 0.8em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <label>Host
+    <input id="host" type="text" placeholder="192.168.1.100">
+  </label>
+
+  <label>Port
+    <input id="port" type="number" value="8080">
+  </label>
+
+  <label>API Key
+    <input id="apikey" type="text" placeholder="Paste your SABnzbd API key">
+  </label>
+  <p class="hint">Find your API key in SABnzbd → Config → General → Security.</p>
+
+  <p id="error"></p>
+  <button id="btn">Connect</button>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const errorEl = document.getElementById('error');
+
+    function showError(msg) {
+      errorEl.textContent = msg;
+      errorEl.style.display = 'block';
+    }
+
+    btn.addEventListener('click', async () => {
+      const host = document.getElementById('host').value.trim();
+      const port = parseInt(document.getElementById('port').value, 10);
+      const apikey = document.getElementById('apikey').value.trim();
+
+      if (!host || !apikey) {
+        showError('Please fill in all fields.');
+        return;
+      }
+
+      btn.disabled = true;
+      errorEl.style.display = 'none';
+
+      try {
+        await Homey.emit('test_connection', { host, port, apikey });
+        Homey.done();
+      } catch (err) {
+        showError(err.message || 'Connection failed. Check host, port, and API key.');
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

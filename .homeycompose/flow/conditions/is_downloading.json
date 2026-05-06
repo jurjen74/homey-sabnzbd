@@ -1,0 +1,10 @@
+{
+  "title": { "en": "!{{Is|Is not}} actively downloading" },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    }
+  ]
+}

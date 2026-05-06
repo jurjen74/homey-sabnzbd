@@ -1,0 +1,14 @@
+{
+  "type": "enum",
+  "title": { "en": "Status" },
+  "values": [
+    { "id": "idle",        "title": { "en": "Idle" } },
+    { "id": "downloading", "title": { "en": "Downloading" } },
+    { "id": "paused",      "title": { "en": "Paused" } },
+    { "id": "error",       "title": { "en": "Error" } }
+  ],
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": false
+}

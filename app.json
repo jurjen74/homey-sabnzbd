@@ -26,5 +26,436 @@
   "author": {
     "name": "Jurjen Ladenius",
     "email": "jurjen@ladenius.net"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "A download completed"
+        },
+        "hint": {
+          "en": "Triggers when a download finishes successfully."
+        },
+        "tokens": [
+          {
+            "name": "name",
+            "type": "string",
+            "title": {
+              "en": "Name"
+            },
+            "example": {
+              "en": "Ubuntu 24.04"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "download_complete"
+      },
+      {
+        "title": {
+          "en": "Queue became empty"
+        },
+        "hint": {
+          "en": "Triggers when all downloads complete and the queue is empty."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "queue_empty"
+      },
+      {
+        "title": {
+          "en": "Status changed"
+        },
+        "hint": {
+          "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error)."
+        },
+        "tokens": [
+          {
+            "name": "status",
+            "type": "string",
+            "title": {
+              "en": "Status"
+            },
+            "example": {
+              "en": "downloading"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "status_changed"
+      }
+    ],
+    "conditions": [
+      {
+        "title": {
+          "en": "!{{Is|Is not}} actively downloading"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "is_downloading"
+      },
+      {
+        "title": {
+          "en": "Queue !{{is|is not}} paused"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "is_paused"
+      },
+      {
+        "title": {
+          "en": "Queue size !{{is|is not}} above {{size}} GB"
+        },
+        "titleFormatted": {
+          "en": "Queue size !{{is|is not}} above [[size]] GB"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          },
+          {
+            "name": "size",
+            "type": "number",
+            "title": {
+              "en": "Size (GB)"
+            },
+            "min": 0,
+            "step": 0.1
+          }
+        ],
+        "id": "queue_size_above"
+      },
+      {
+        "title": {
+          "en": "Download speed !{{is|is not}} above {{speed}} MB/s"
+        },
+        "titleFormatted": {
+          "en": "Download speed !{{is|is not}} above [[speed]] MB/s"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          },
+          {
+            "name": "speed",
+            "type": "number",
+            "title": {
+              "en": "Speed (MB/s)"
+            },
+            "min": 0,
+            "step": 0.5
+          }
+        ],
+        "id": "speed_above"
+      },
+      {
+        "title": {
+          "en": "Download speed !{{is|is not}} below {{speed}} MB/s"
+        },
+        "titleFormatted": {
+          "en": "Download speed !{{is|is not}} below [[speed]] MB/s"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          },
+          {
+            "name": "speed",
+            "type": "number",
+            "title": {
+              "en": "Speed (MB/s)"
+            },
+            "min": 0,
+            "step": 0.5
+          }
+        ],
+        "id": "speed_below"
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Add NZB by URL"
+        },
+        "titleFormatted": {
+          "en": "Add NZB by URL [[url]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          },
+          {
+            "name": "url",
+            "type": "text",
+            "title": {
+              "en": "NZB URL"
+            },
+            "placeholder": {
+              "en": "https://..."
+            }
+          }
+        ],
+        "id": "add_nzb_url"
+      },
+      {
+        "title": {
+          "en": "Pause downloading"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "pause"
+      },
+      {
+        "title": {
+          "en": "Resume downloading"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          }
+        ],
+        "id": "resume"
+      },
+      {
+        "title": {
+          "en": "Set speed limit to {{speed}} MB/s"
+        },
+        "titleFormatted": {
+          "en": "Set speed limit to [[speed]] MB/s"
+        },
+        "hint": {
+          "en": "Set to 0 for unlimited speed."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sabnzbd"
+          },
+          {
+            "name": "speed",
+            "type": "number",
+            "title": {
+              "en": "Speed (MB/s, 0 = unlimited)"
+            },
+            "min": 0,
+            "step": 0.5
+          }
+        ],
+        "id": "set_speed_limit"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "SABnzbd"
+      },
+      "class": "other",
+      "capabilities": [
+        "onoff",
+        "measure_download_speed",
+        "sabnzbd_status",
+        "measure_queue_size",
+        "measure_queue_count"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "title": {
+            "en": "Downloading"
+          }
+        },
+        "measure_download_speed": {
+          "title": {
+            "en": "Speed"
+          }
+        },
+        "measure_queue_size": {
+          "title": {
+            "en": "Queue"
+          }
+        },
+        "measure_queue_count": {
+          "title": {
+            "en": "Items"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "url",
+          "type": "text",
+          "label": {
+            "en": "URL"
+          },
+          "hint": {
+            "en": "SABnzbd URL including scheme and port, e.g. http://192.168.1.100:8080"
+          },
+          "value": "http://192.168.1.100:8080"
+        },
+        {
+          "id": "apikey",
+          "type": "text",
+          "label": {
+            "en": "API Key"
+          },
+          "value": ""
+        },
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval (seconds)"
+          },
+          "hint": {
+            "en": "How often to fetch queue status. Lower = more responsive but more network traffic."
+          },
+          "value": 10,
+          "attr": {
+            "min": 5,
+            "max": 300
+          }
+        }
+      ],
+      "pair": [
+        {
+          "id": "connect",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "sabnzbd"
+    }
+  ],
+  "capabilities": {
+    "measure_download_speed": {
+      "type": "number",
+      "title": {
+        "en": "Download Speed"
+      },
+      "units": {
+        "en": "MB/s"
+      },
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true
+    },
+    "measure_queue_count": {
+      "type": "number",
+      "title": {
+        "en": "Queue Items"
+      },
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": false
+    },
+    "measure_queue_size": {
+      "type": "number",
+      "title": {
+        "en": "Queue Size"
+      },
+      "units": {
+        "en": "MB"
+      },
+      "decimals": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true
+    },
+    "sabnzbd_status": {
+      "type": "enum",
+      "title": {
+        "en": "Status"
+      },
+      "values": [
+        {
+          "id": "idle",
+          "title": {
+            "en": "Idle"
+          }
+        },
+        {
+          "id": "downloading",
+          "title": {
+            "en": "Downloading"
+          }
+        },
+        {
+          "id": "paused",
+          "title": {
+            "en": "Paused"
+          }
+        },
+        {
+          "id": "error",
+          "title": {
+            "en": "Error"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": false
+    }
   }
 }

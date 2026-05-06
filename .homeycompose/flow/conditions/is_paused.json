@@ -1,0 +1,10 @@
+{
+  "title": { "en": "Queue !{{is|is not}} paused" },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": { "en": "Add NZB by URL" },
+  "titleFormatted": { "en": "Add NZB by URL [[url]]" },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    },
+    {
+      "name": "url",
+      "type": "text",
+      "title": { "en": "NZB URL" },
+      "placeholder": { "en": "https://..." }
+    }
+  ]
+}

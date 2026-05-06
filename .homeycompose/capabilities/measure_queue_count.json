@@ -1,0 +1,9 @@
+{
+  "type": "number",
+  "title": { "en": "Queue Items" },
+  "decimals": 0,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": false
+}

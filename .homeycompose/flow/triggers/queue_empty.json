@@ -1,0 +1,11 @@
+{
+  "title": { "en": "Queue became empty" },
+  "hint": { "en": "Triggers when all downloads complete and the queue is empty." },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    }
+  ]
+}

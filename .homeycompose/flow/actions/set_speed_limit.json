@@ -1,0 +1,19 @@
+{
+  "title": { "en": "Set speed limit to {{speed}} MB/s" },
+  "titleFormatted": { "en": "Set speed limit to [[speed]] MB/s" },
+  "hint": { "en": "Set to 0 for unlimited speed." },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    },
+    {
+      "name": "speed",
+      "type": "number",
+      "title": { "en": "Speed (MB/s, 0 = unlimited)" },
+      "min": 0,
+      "step": 0.5
+    }
+  ]
+}

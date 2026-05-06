@@ -1,0 +1,19 @@
+{
+  "title": { "en": "A download completed" },
+  "hint": { "en": "Triggers when a download finishes successfully." },
+  "tokens": [
+    {
+      "name": "name",
+      "type": "string",
+      "title": { "en": "Name" },
+      "example": { "en": "Ubuntu 24.04" }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=sabnzbd"
+    }
+  ]
+}
