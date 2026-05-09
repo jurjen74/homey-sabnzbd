@@ -10,5 +10,6 @@
   "getable": true,
   "setable": false,
   "uiComponent": "sensor",
+  "icon": "/assets/capabilities/sabnzbd_status.svg",
   "insights": false
 }

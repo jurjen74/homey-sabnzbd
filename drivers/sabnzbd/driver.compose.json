@@ -1,6 +1,11 @@
 {
   "name": { "en": "SABnzbd" },
   "class": "other",
+  "images": {
+    "small": "/drivers/sabnzbd/assets/images/small.png",
+    "large": "/drivers/sabnzbd/assets/images/large.png",
+    "xlarge": "/drivers/sabnzbd/assets/images/xlarge.png"
+  },
   "capabilities": [
     "onoff",
     "measure_download_speed",

@@ -27,6 +27,7 @@
     "name": "Jurjen Ladenius",
     "email": "jurjen@ladenius.net"
   },
+  "brandColor": "#FFB300",
   "flow": {
     "triggers": [
       {
@@ -294,6 +295,11 @@
         "en": "SABnzbd"
       },
       "class": "other",
+      "images": {
+        "small": "/drivers/sabnzbd/assets/images/small.png",
+        "large": "/drivers/sabnzbd/assets/images/large.png",
+        "xlarge": "/drivers/sabnzbd/assets/images/xlarge.png"
+      },
       "capabilities": [
         "onoff",
         "measure_download_speed",
@@ -394,6 +400,7 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
+      "icon": "/assets/capabilities/measure_download_speed.svg",
       "insights": true
     },
     "measure_queue_count": {
@@ -405,6 +412,7 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
+      "icon": "/assets/capabilities/measure_queue_count.svg",
       "insights": false
     },
     "measure_queue_size": {
@@ -419,6 +427,7 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
+      "icon": "/assets/capabilities/measure_queue_size.svg",
       "insights": true
     },
     "sabnzbd_status": {
@@ -455,6 +464,7 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor",
+      "icon": "/assets/capabilities/sabnzbd_status.svg",
       "insights": false
     }
   }

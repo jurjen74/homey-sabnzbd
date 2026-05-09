@@ -3,7 +3,8 @@
     "allow": [
       "Bash(grep -v \"^\\\\\\\\./git\")",
       "Bash(homey app *)",
-      "WebFetch(domain:apps.developer.homey.app)"
+      "WebFetch(domain:apps.developer.homey.app)",
+      "Bash(Test-Path *)"
     ]
   }
 }
