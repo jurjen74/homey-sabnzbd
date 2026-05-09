@@ -22,9 +22,16 @@ drivers/sabnzbd/
   driver.compose.json                — capabilities, settings, pairing, flow cards
   driver.js                          — flow card registration (conditions/actions/triggers) + onPair
   device.js                          — polling loop, capability updates, event detection
-  pair/start.html                    — pairing UI (host / port / API key form)
-.homeycompose/capabilities/          — custom capability definitions
-locales/en.json                      — user-facing strings
+  pair/connect.html                  — pairing UI (URL / API key form with inline SABnzbd SVG icon)
+  assets/icon.svg                    — driver/device icon (white SABnzbd logo on #FFB300)
+.homeycompose/capabilities/          — custom capability definitions (each with icon.svg ref)
+.homeycompose/flow/                  — flow cards: triggers/, conditions/, actions/
+assets/icon.svg                      — app icon (same white SABnzbd logo)
+assets/capabilities/*.svg            — capability icons (Material Design, fill=currentColor)
+assets/images/                       — app store images (small 250×175, large 500×350, xlarge 1000×700)
+drivers/sabnzbd/assets/images/       — driver images (small 75×75, large 500×500, xlarge 1000×1000)
+locales/en.json                      — English UI strings (pair view)
+locales/nl.json                      — Dutch UI strings (pair view)
 ```
 
 ### Key conventions
