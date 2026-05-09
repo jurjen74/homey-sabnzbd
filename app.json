@@ -9,10 +9,12 @@
     "local"
   ],
   "name": {
-    "en": "SABnzbd"
+    "en": "SABnzbd",
+    "nl": "SABnzbd"
   },
   "description": {
-    "en": "Manage usenet downloads with SABnzbd"
+    "en": "Manage usenet downloads with SABnzbd",
+    "nl": "Beheer usenet-downloads met SABnzbd"
   },
   "category": [
     "internet"
@@ -28,24 +30,41 @@
     "email": "jurjen@ladenius.net"
   },
   "brandColor": "#FFB300",
+  "support": "https://github.com/jurjen74/homey-sabnzbd/issues",
+  "bugs": {
+    "url": "https://github.com/jurjen74/homey-sabnzbd/issues"
+  },
+  "source": "https://github.com/jurjen74/homey-sabnzbd",
+  "homeyCommunityTopicId": 154696,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "aessedai@ladenius.net"
+      }
+    }
+  },
   "flow": {
     "triggers": [
       {
         "title": {
-          "en": "A download completed"
+          "en": "A download completed",
+          "nl": "Een download is voltooid"
         },
         "hint": {
-          "en": "Triggers when a download finishes successfully."
+          "en": "Triggers when a download finishes successfully.",
+          "nl": "Activeert wanneer een download succesvol is afgerond."
         },
         "tokens": [
           {
             "name": "name",
             "type": "string",
             "title": {
-              "en": "Name"
+              "en": "Name",
+              "nl": "Naam"
             },
             "example": {
-              "en": "Ubuntu 24.04"
+              "en": "Ubuntu 24.04",
+              "nl": "Ubuntu 24.04"
             }
           }
         ],
@@ -60,10 +79,12 @@
       },
       {
         "title": {
-          "en": "Queue became empty"
+          "en": "Queue became empty",
+          "nl": "Wachtrij is leeggelopen"
         },
         "hint": {
-          "en": "Triggers when all downloads complete and the queue is empty."
+          "en": "Triggers when all downloads complete and the queue is empty.",
+          "nl": "Activeert wanneer alle downloads zijn voltooid en de wachtrij leeg is."
         },
         "args": [
           {
@@ -76,20 +97,24 @@
       },
       {
         "title": {
-          "en": "Status changed"
+          "en": "Status changed",
+          "nl": "Status gewijzigd"
         },
         "hint": {
-          "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error)."
+          "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error).",
+          "nl": "Activeert wanneer de SABnzbd-status wijzigt (inactief, downloaden, gepauzeerd, fout)."
         },
         "tokens": [
           {
             "name": "status",
             "type": "string",
             "title": {
-              "en": "Status"
+              "en": "Status",
+              "nl": "Status"
             },
             "example": {
-              "en": "downloading"
+              "en": "downloading",
+              "nl": "downloaden"
             }
           }
         ],
@@ -106,7 +131,8 @@
     "conditions": [
       {
         "title": {
-          "en": "!{{Is|Is not}} actively downloading"
+          "en": "!{{Is|Is not}} actively downloading",
+          "nl": "!{{Is|Is niet}} actief aan het downloaden"
         },
         "args": [
           {
@@ -119,7 +145,8 @@
       },
       {
         "title": {
-          "en": "Queue !{{is|is not}} paused"
+          "en": "Queue !{{is|is not}} paused",
+          "nl": "Wachtrij is !{{gepauzeerd|niet gepauzeerd}}"
         },
         "args": [
           {
@@ -132,10 +159,12 @@
       },
       {
         "title": {
-          "en": "Queue size !{{is|is not}} above {{size}} GB"
+          "en": "Queue size !{{is|is not}} above {{size}} GB",
+          "nl": "Wachtrijgrootte !{{is|is niet}} groter dan {{size}} GB"
         },
         "titleFormatted": {
-          "en": "Queue size !{{is|is not}} above [[size]] GB"
+          "en": "Queue size !{{is|is not}} above [[size]] GB",
+          "nl": "Wachtrijgrootte !{{is|is niet}} groter dan [[size]] GB"
         },
         "args": [
           {
@@ -147,7 +176,8 @@
             "name": "size",
             "type": "number",
             "title": {
-              "en": "Size (GB)"
+              "en": "Size (GB)",
+              "nl": "Grootte (GB)"
             },
             "min": 0,
             "step": 0.1
@@ -157,10 +187,12 @@
       },
       {
         "title": {
-          "en": "Download speed !{{is|is not}} above {{speed}} MB/s"
+          "en": "Download speed !{{is|is not}} above {{speed}} MB/s",
+          "nl": "Downloadsnelheid !{{is|is niet}} hoger dan {{speed}} MB/s"
         },
         "titleFormatted": {
-          "en": "Download speed !{{is|is not}} above [[speed]] MB/s"
+          "en": "Download speed !{{is|is not}} above [[speed]] MB/s",
+          "nl": "Downloadsnelheid !{{is|is niet}} hoger dan [[speed]] MB/s"
         },
         "args": [
           {
@@ -172,7 +204,8 @@
             "name": "speed",
             "type": "number",
             "title": {
-              "en": "Speed (MB/s)"
+              "en": "Speed (MB/s)",
+              "nl": "Snelheid (MB/s)"
             },
             "min": 0,
             "step": 0.5
@@ -182,10 +215,12 @@
       },
       {
         "title": {
-          "en": "Download speed !{{is|is not}} below {{speed}} MB/s"
+          "en": "Download speed !{{is|is not}} below {{speed}} MB/s",
+          "nl": "Downloadsnelheid !{{is|is niet}} lager dan {{speed}} MB/s"
         },
         "titleFormatted": {
-          "en": "Download speed !{{is|is not}} below [[speed]] MB/s"
+          "en": "Download speed !{{is|is not}} below [[speed]] MB/s",
+          "nl": "Downloadsnelheid !{{is|is niet}} lager dan [[speed]] MB/s"
         },
         "args": [
           {
@@ -197,7 +232,8 @@
             "name": "speed",
             "type": "number",
             "title": {
-              "en": "Speed (MB/s)"
+              "en": "Speed (MB/s)",
+              "nl": "Snelheid (MB/s)"
             },
             "min": 0,
             "step": 0.5
@@ -209,10 +245,12 @@
     "actions": [
       {
         "title": {
-          "en": "Add NZB by URL"
+          "en": "Add NZB by URL",
+          "nl": "NZB toevoegen via URL"
         },
         "titleFormatted": {
-          "en": "Add NZB by URL [[url]]"
+          "en": "Add NZB by URL [[url]]",
+          "nl": "NZB toevoegen via URL [[url]]"
         },
         "args": [
           {
@@ -224,10 +262,12 @@
             "name": "url",
             "type": "text",
             "title": {
-              "en": "NZB URL"
+              "en": "NZB URL",
+              "nl": "NZB-URL"
             },
             "placeholder": {
-              "en": "https://..."
+              "en": "https://...",
+              "nl": "https://..."
             }
           }
         ],
@@ -235,7 +275,8 @@
       },
       {
         "title": {
-          "en": "Pause downloading"
+          "en": "Pause downloading",
+          "nl": "Downloaden pauzeren"
         },
         "args": [
           {
@@ -248,7 +289,8 @@
       },
       {
         "title": {
-          "en": "Resume downloading"
+          "en": "Resume downloading",
+          "nl": "Downloaden hervatten"
         },
         "args": [
           {
@@ -261,13 +303,16 @@
       },
       {
         "title": {
-          "en": "Set speed limit to {{speed}} MB/s"
+          "en": "Set speed limit to {{speed}} MB/s",
+          "nl": "Snelheidslimiet instellen op {{speed}} MB/s"
         },
         "titleFormatted": {
-          "en": "Set speed limit to [[speed]] MB/s"
+          "en": "Set speed limit to [[speed]] MB/s",
+          "nl": "Snelheidslimiet instellen op [[speed]] MB/s"
         },
         "hint": {
-          "en": "Set to 0 for unlimited speed."
+          "en": "Set to 0 for unlimited speed.",
+          "nl": "Stel in op 0 voor onbeperkte snelheid."
         },
         "args": [
           {
@@ -279,7 +324,8 @@
             "name": "speed",
             "type": "number",
             "title": {
-              "en": "Speed (MB/s, 0 = unlimited)"
+              "en": "Speed (MB/s, 0 = unlimited)",
+              "nl": "Snelheid (MB/s, 0 = onbeperkt)"
             },
             "min": 0,
             "step": 0.5
@@ -292,7 +338,8 @@
   "drivers": [
     {
       "name": {
-        "en": "SABnzbd"
+        "en": "SABnzbd",
+        "nl": "SABnzbd"
       },
       "class": "other",
       "images": {
@@ -310,22 +357,26 @@
       "capabilitiesOptions": {
         "onoff": {
           "title": {
-            "en": "Downloading"
+            "en": "Downloading",
+            "nl": "Downloaden"
           }
         },
         "measure_download_speed": {
           "title": {
-            "en": "Speed"
+            "en": "Speed",
+            "nl": "Snelheid"
           }
         },
         "measure_queue_size": {
           "title": {
-            "en": "Queue"
+            "en": "Queue",
+            "nl": "Wachtrij"
           }
         },
         "measure_queue_count": {
           "title": {
-            "en": "Items"
+            "en": "Items",
+            "nl": "Items"
           }
         }
       },
@@ -334,10 +385,12 @@
           "id": "url",
           "type": "text",
           "label": {
-            "en": "URL"
+            "en": "URL",
+            "nl": "URL"
           },
           "hint": {
-            "en": "SABnzbd URL including scheme and port, e.g. http://192.168.1.100:8080"
+            "en": "SABnzbd URL including scheme and port, e.g. http://192.168.1.100:8080",
+            "nl": "SABnzbd-URL inclusief protocol en poort, bijv. http://192.168.1.100:8080"
           },
           "value": "http://192.168.1.100:8080"
         },
@@ -345,7 +398,8 @@
           "id": "apikey",
           "type": "text",
           "label": {
-            "en": "API Key"
+            "en": "API Key",
+            "nl": "API-sleutel"
           },
           "value": ""
         },
@@ -353,10 +407,12 @@
           "id": "poll_interval",
           "type": "number",
           "label": {
-            "en": "Poll interval (seconds)"
+            "en": "Poll interval (seconds)",
+            "nl": "Pollinginterval (seconden)"
           },
           "hint": {
-            "en": "How often to fetch queue status. Lower = more responsive but more network traffic."
+            "en": "How often to fetch queue status. Lower = more responsive but more network traffic.",
+            "nl": "Hoe vaak de wachtrij wordt opgehaald. Lager = sneller bijgewerkt maar meer netwerkverkeer."
           },
           "value": 10,
           "attr": {
@@ -391,10 +447,12 @@
     "measure_download_speed": {
       "type": "number",
       "title": {
-        "en": "Download Speed"
+        "en": "Download Speed",
+        "nl": "Downloadsnelheid"
       },
       "units": {
-        "en": "MB/s"
+        "en": "MB/s",
+        "nl": "MB/s"
       },
       "decimals": 2,
       "getable": true,
@@ -406,7 +464,8 @@
     "measure_queue_count": {
       "type": "number",
       "title": {
-        "en": "Queue Items"
+        "en": "Queue Items",
+        "nl": "Wachtrij-items"
       },
       "decimals": 0,
       "getable": true,
@@ -418,10 +477,12 @@
     "measure_queue_size": {
       "type": "number",
       "title": {
-        "en": "Queue Size"
+        "en": "Queue Size",
+        "nl": "Wachtrijgrootte"
       },
       "units": {
-        "en": "MB"
+        "en": "MB",
+        "nl": "MB"
       },
       "decimals": 0,
       "getable": true,
@@ -433,31 +494,36 @@
     "sabnzbd_status": {
       "type": "enum",
       "title": {
-        "en": "Status"
+        "en": "Status",
+        "nl": "Status"
       },
       "values": [
         {
           "id": "idle",
           "title": {
-            "en": "Idle"
+            "en": "Idle",
+            "nl": "Inactief"
           }
         },
         {
           "id": "downloading",
           "title": {
-            "en": "Downloading"
+            "en": "Downloading",
+            "nl": "Downloaden"
           }
         },
         {
           "id": "paused",
           "title": {
-            "en": "Paused"
+            "en": "Paused",
+            "nl": "Gepauzeerd"
           }
         },
         {
           "id": "error",
           "title": {
-            "en": "Error"
+            "en": "Error",
+            "nl": "Fout"
           }
         }
       ],
