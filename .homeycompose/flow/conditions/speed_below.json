@@ -1,6 +1,6 @@
 {
-  "title": { "en": "Download speed !{{is|is not}} below {{speed}} MB/s" },
-  "titleFormatted": { "en": "Download speed !{{is|is not}} below [[speed]] MB/s" },
+  "title": { "en": "Download speed !{{is|is not}} below {{speed}} MB/s", "nl": "Downloadsnelheid !{{is|is niet}} lager dan {{speed}} MB/s" },
+  "titleFormatted": { "en": "Download speed !{{is|is not}} below [[speed]] MB/s", "nl": "Downloadsnelheid !{{is|is niet}} lager dan [[speed]] MB/s" },
   "args": [
     {
       "name": "device",
@@ -10,7 +10,7 @@
     {
       "name": "speed",
       "type": "number",
-      "title": { "en": "Speed (MB/s)" },
+      "title": { "en": "Speed (MB/s)", "nl": "Snelheid (MB/s)" },
       "min": 0,
       "step": 0.5
     }

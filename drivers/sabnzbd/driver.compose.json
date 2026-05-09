@@ -1,5 +1,5 @@
 {
-  "name": { "en": "SABnzbd" },
+  "name": { "en": "SABnzbd", "nl": "SABnzbd" },
   "class": "other",
   "images": {
     "small": "/drivers/sabnzbd/assets/images/small.png",
@@ -15,37 +15,37 @@
   ],
   "capabilitiesOptions": {
     "onoff": {
-      "title": { "en": "Downloading" }
+      "title": { "en": "Downloading", "nl": "Downloaden" }
     },
     "measure_download_speed": {
-      "title": { "en": "Speed" }
+      "title": { "en": "Speed", "nl": "Snelheid" }
     },
     "measure_queue_size": {
-      "title": { "en": "Queue" }
+      "title": { "en": "Queue", "nl": "Wachtrij" }
     },
     "measure_queue_count": {
-      "title": { "en": "Items" }
+      "title": { "en": "Items", "nl": "Items" }
     }
   },
   "settings": [
     {
       "id": "url",
       "type": "text",
-      "label": { "en": "URL" },
-      "hint": { "en": "SABnzbd URL including scheme and port, e.g. http://192.168.1.100:8080" },
+      "label": { "en": "URL", "nl": "URL" },
+      "hint": { "en": "SABnzbd URL including scheme and port, e.g. http://192.168.1.100:8080", "nl": "SABnzbd-URL inclusief protocol en poort, bijv. http://192.168.1.100:8080" },
       "value": "http://192.168.1.100:8080"
     },
     {
       "id": "apikey",
       "type": "text",
-      "label": { "en": "API Key" },
+      "label": { "en": "API Key", "nl": "API-sleutel" },
       "value": ""
     },
     {
       "id": "poll_interval",
       "type": "number",
-      "label": { "en": "Poll interval (seconds)" },
-      "hint": { "en": "How often to fetch queue status. Lower = more responsive but more network traffic." },
+      "label": { "en": "Poll interval (seconds)", "nl": "Pollinginterval (seconden)" },
+      "hint": { "en": "How often to fetch queue status. Lower = more responsive but more network traffic.", "nl": "Hoe vaak de wachtrij wordt opgehaald. Lager = sneller bijgewerkt maar meer netwerkverkeer." },
       "value": 10,
       "attr": { "min": 5, "max": 300 }
     }

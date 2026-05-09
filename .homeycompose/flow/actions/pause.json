@@ -1,5 +1,5 @@
 {
-  "title": { "en": "Pause downloading" },
+  "title": { "en": "Pause downloading", "nl": "Downloaden pauzeren" },
   "args": [
     {
       "name": "device",

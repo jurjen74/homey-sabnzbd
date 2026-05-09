@@ -1,6 +1,6 @@
 {
-  "title": { "en": "Add NZB by URL" },
-  "titleFormatted": { "en": "Add NZB by URL [[url]]" },
+  "title": { "en": "Add NZB by URL", "nl": "NZB toevoegen via URL" },
+  "titleFormatted": { "en": "Add NZB by URL [[url]]", "nl": "NZB toevoegen via URL [[url]]" },
   "args": [
     {
       "name": "device",
@@ -10,8 +10,8 @@
     {
       "name": "url",
       "type": "text",
-      "title": { "en": "NZB URL" },
-      "placeholder": { "en": "https://..." }
+      "title": { "en": "NZB URL", "nl": "NZB-URL" },
+      "placeholder": { "en": "https://...", "nl": "https://..." }
     }
   ]
 }

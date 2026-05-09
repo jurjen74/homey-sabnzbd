@@ -1,7 +1,7 @@
 {
   "type": "number",
-  "title": { "en": "Download Speed" },
-  "units": { "en": "MB/s" },
+  "title": { "en": "Download Speed", "nl": "Downloadsnelheid" },
+  "units": { "en": "MB/s", "nl": "MB/s" },
   "decimals": 2,
   "getable": true,
   "setable": false,

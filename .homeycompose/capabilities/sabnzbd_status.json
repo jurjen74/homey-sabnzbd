@@ -1,11 +1,11 @@
 {
   "type": "enum",
-  "title": { "en": "Status" },
+  "title": { "en": "Status", "nl": "Status" },
   "values": [
-    { "id": "idle",        "title": { "en": "Idle" } },
-    { "id": "downloading", "title": { "en": "Downloading" } },
-    { "id": "paused",      "title": { "en": "Paused" } },
-    { "id": "error",       "title": { "en": "Error" } }
+    { "id": "idle",        "title": { "en": "Idle",        "nl": "Inactief" } },
+    { "id": "downloading", "title": { "en": "Downloading", "nl": "Downloaden" } },
+    { "id": "paused",      "title": { "en": "Paused",      "nl": "Gepauzeerd" } },
+    { "id": "error",       "title": { "en": "Error",       "nl": "Fout" } }
   ],
   "getable": true,
   "setable": false,

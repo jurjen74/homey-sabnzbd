@@ -1,0 +1,21 @@
+{
+  "pair": {
+    "connect": {
+      "title": "Verbinden met SABnzbd",
+      "subtitle": "Voer je SABnzbd-URL en API-sleutel in",
+      "label_url": "URL",
+      "placeholder_url": "http://192.168.1.100:8080",
+      "hint_url": "Inclusief protocol en poort, bijv. http://192.168.1.100:8080",
+      "label_apikey": "API-sleutel",
+      "placeholder_apikey": "Plak je SABnzbd API-sleutel",
+      "hint_apikey": "Te vinden in SABnzbd → Config → General → Security",
+      "btn_test": "Verbinding testen",
+      "btn_testing": "Testen...",
+      "btn_next": "Apparaat toevoegen",
+      "success_connected": "Verbonden met SABnzbd {version}",
+      "error_url_required": "Voer een URL in",
+      "error_apikey_required": "Voer een API-sleutel in",
+      "error_connection_failed": "Verbinding mislukt. Controleer de URL en API-sleutel."
+    }
+  }
+}

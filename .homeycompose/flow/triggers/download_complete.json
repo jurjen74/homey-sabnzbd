@@ -1,12 +1,12 @@
 {
-  "title": { "en": "A download completed" },
-  "hint": { "en": "Triggers when a download finishes successfully." },
+  "title": { "en": "A download completed", "nl": "Een download is voltooid" },
+  "hint": { "en": "Triggers when a download finishes successfully.", "nl": "Activeert wanneer een download succesvol is afgerond." },
   "tokens": [
     {
       "name": "name",
       "type": "string",
-      "title": { "en": "Name" },
-      "example": { "en": "Ubuntu 24.04" }
+      "title": { "en": "Name", "nl": "Naam" },
+      "example": { "en": "Ubuntu 24.04", "nl": "Ubuntu 24.04" }
     }
   ],
   "args": [

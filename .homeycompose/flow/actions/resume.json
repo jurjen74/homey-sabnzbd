@@ -1,5 +1,5 @@
 {
-  "title": { "en": "Resume downloading" },
+  "title": { "en": "Resume downloading", "nl": "Downloaden hervatten" },
   "args": [
     {
       "name": "device",

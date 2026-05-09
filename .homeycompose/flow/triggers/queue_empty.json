@@ -1,6 +1,6 @@
 {
-  "title": { "en": "Queue became empty" },
-  "hint": { "en": "Triggers when all downloads complete and the queue is empty." },
+  "title": { "en": "Queue became empty", "nl": "Wachtrij is leeggelopen" },
+  "hint": { "en": "Triggers when all downloads complete and the queue is empty.", "nl": "Activeert wanneer alle downloads zijn voltooid en de wachtrij leeg is." },
   "args": [
     {
       "name": "device",

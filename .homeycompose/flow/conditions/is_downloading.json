@@ -1,5 +1,5 @@
 {
-  "title": { "en": "!{{Is|Is not}} actively downloading" },
+  "title": { "en": "!{{Is|Is not}} actively downloading", "nl": "!{{Is|Is niet}} actief aan het downloaden" },
   "args": [
     {
       "name": "device",

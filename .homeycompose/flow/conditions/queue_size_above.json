@@ -1,6 +1,6 @@
 {
-  "title": { "en": "Queue size !{{is|is not}} above {{size}} GB" },
-  "titleFormatted": { "en": "Queue size !{{is|is not}} above [[size]] GB" },
+  "title": { "en": "Queue size !{{is|is not}} above {{size}} GB", "nl": "Wachtrijgrootte !{{is|is niet}} groter dan {{size}} GB" },
+  "titleFormatted": { "en": "Queue size !{{is|is not}} above [[size]] GB", "nl": "Wachtrijgrootte !{{is|is niet}} groter dan [[size]] GB" },
   "args": [
     {
       "name": "device",
@@ -10,7 +10,7 @@
     {
       "name": "size",
       "type": "number",
-      "title": { "en": "Size (GB)" },
+      "title": { "en": "Size (GB)", "nl": "Grootte (GB)" },
       "min": 0,
       "step": 0.1
     }

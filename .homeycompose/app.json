@@ -8,10 +8,12 @@
     "local"
   ],
   "name": {
-    "en": "SABnzbd"
+    "en": "SABnzbd",
+    "nl": "SABnzbd"
   },
   "description": {
-    "en": "Manage usenet downloads with SABnzbd"
+    "en": "Manage usenet downloads with SABnzbd",
+    "nl": "Beheer usenet-downloads met SABnzbd"
   },
   "category": [
     "internet"
@@ -26,5 +28,18 @@
     "name": "Jurjen Ladenius",
     "email": "jurjen@ladenius.net"
   },
-  "brandColor": "#FFB300"
+  "brandColor": "#FFB300",
+  "support": "https://github.com/jurjen74/homey-sabnzbd/issues",
+  "bugs": {
+    "url": "https://github.com/jurjen74/homey-sabnzbd/issues"
+  },
+  "source": "https://github.com/jurjen74/homey-sabnzbd",
+  "homeyCommunityTopicId": 154696,
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "aessedai@ladenius.net"
+      }
+    }
+  }
 }

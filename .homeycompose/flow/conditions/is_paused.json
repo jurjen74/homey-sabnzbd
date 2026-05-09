@@ -1,5 +1,5 @@
 {
-  "title": { "en": "Queue !{{is|is not}} paused" },
+  "title": { "en": "Queue !{{is|is not}} paused", "nl": "Wachtrij is !{{gepauzeerd|niet gepauzeerd}}" },
   "args": [
     {
       "name": "device",

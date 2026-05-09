@@ -1,6 +1,6 @@
 {
   "type": "number",
-  "title": { "en": "Queue Items" },
+  "title": { "en": "Queue Items", "nl": "Wachtrij-items" },
   "decimals": 0,
   "getable": true,
   "setable": false,

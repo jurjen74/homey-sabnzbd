@@ -1,12 +1,12 @@
 {
-  "title": { "en": "Status changed" },
-  "hint": { "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error)." },
+  "title": { "en": "Status changed", "nl": "Status gewijzigd" },
+  "hint": { "en": "Triggers whenever the SABnzbd status changes (idle, downloading, paused, error).", "nl": "Activeert wanneer de SABnzbd-status wijzigt (inactief, downloaden, gepauzeerd, fout)." },
   "tokens": [
     {
       "name": "status",
       "type": "string",
-      "title": { "en": "Status" },
-      "example": { "en": "downloading" }
+      "title": { "en": "Status", "nl": "Status" },
+      "example": { "en": "downloading", "nl": "downloaden" }
     }
   ],
   "args": [
