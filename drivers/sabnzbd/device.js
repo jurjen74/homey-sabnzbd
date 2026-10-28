@@ -30,7 +30,7 @@ class SabnzbdDevice extends Homey.Device {
   _startPolling(intervalSeconds) {
     const secs = intervalSeconds ?? this.getSetting('poll_interval') ?? 10;
     this._pollTimer = this.homey.setInterval(() => this._poll(), secs * 1000);
-    this._poll(); // immediate first poll
+    this._poll().catch((err) => this.error(err)); // immediate first poll
   }
 
   _stopPolling() {
@@ -98,7 +98,7 @@ class SabnzbdDevice extends Homey.Device {
 
   async _handleHistory(slots) {
     if (this._seenHistoryIds === null) {
-      this._seenHistoryIds = new Set(slots.map(s => s.nzo_id));
+      this._seenHistoryIds = new Set(slots.map((s) => s.nzo_id));
       return;
     }
 
@@ -108,7 +108,7 @@ class SabnzbdDevice extends Homey.Device {
       }
     }
 
-    this._seenHistoryIds = new Set(slots.map(s => s.nzo_id));
+    this._seenHistoryIds = new Set(slots.map((s) => s.nzo_id));
   }
 
   async onSettings({ newSettings }) {

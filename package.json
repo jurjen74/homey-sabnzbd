@@ -2,6 +2,9 @@
   "name": "net.ladenius.sabnzbd",
   "version": "1.0.0",
   "main": "app.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
   },
